@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prettier": "prettier --check \"src/**/(*.js|*.ts)\" server.js",
+    "prettier:fix": "prettier --write \"src/**/(*.js|*.ts)\" server.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,10 @@
     "express": "^4.18.2",
     "helmet": "^7.0.0",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0"
   }
 }
