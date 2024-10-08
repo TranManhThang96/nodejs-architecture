@@ -5,7 +5,6 @@ const compression = require('compression');
 const { checkOverLoad } = require('./helpers/check.connect');
 require('dotenv').config();
 
-
 const app = express();
 
 // init middleware
@@ -21,7 +20,7 @@ require('./dbs/init.mongodb');
 app.get('/', (req, res, next) => {
   return res.status(200).json({
     msg: 'oki',
-    metadata: 'compression'.repeat(100000),
+    metadata: 'compression'.repeat(2),
   });
 });
 
