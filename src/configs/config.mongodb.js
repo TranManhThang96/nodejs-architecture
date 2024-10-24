@@ -3,9 +3,9 @@ const configDev = {
     port: process.env.DEV_APP_PORT,
   },
   db: {
-    host:  process.env.DEV_DB_HOST,
-    port:  process.env.DEV_DB_PORT,
-    name:  process.env.DEV_DB_NAME,
+    host: process.env.DEV_DB_HOST,
+    port: process.env.DEV_DB_PORT,
+    name: process.env.DEV_DB_NAME,
   },
 };
 
@@ -14,9 +14,9 @@ const configProd = {
     port: process.env.PROD_APP_PORT,
   },
   db: {
-    host:  process.env.PROD_DB_HOST,
-    port:  process.env.PROD_DB_PORT,
-    name:  process.env.PROD_DB_NAME,
+    host: process.env.PROD_DB_HOST,
+    port: process.env.PROD_DB_PORT,
+    name: process.env.PROD_DB_NAME,
   },
 };
 
