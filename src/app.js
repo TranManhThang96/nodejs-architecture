@@ -11,18 +11,15 @@ const app = express();
 app.use(morgan('dev')); // khi dev thì nên bật mode này
 app.use(helmet());
 app.use(compression());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // init db
 require('./dbs/init.mongodb');
 // checkOverLoad();
 
 // init routes
-app.get('/', (req, res, next) => {
-  return res.status(200).json({
-    msg: 'oki',
-    metadata: 'compression'.repeat(2),
-  });
-});
+app.use('/', require('./routes/index'));
 
 // handling error
 app.get('/', (err, req, res, next) => {});
